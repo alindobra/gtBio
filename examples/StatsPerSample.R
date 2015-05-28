@@ -1,0 +1,5 @@
+# View basic satistics for each sample
+
+data <- Read(GSE46691)[Score>5];
+agg <- GroupBy(data, group=Sample, avg=Average(Score), cnt=Count());
+View(agg);
